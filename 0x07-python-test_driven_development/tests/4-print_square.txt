@@ -1,0 +1,78 @@
+# 4-print_square.txt
+
+=============================
+ How to Use 4-print_square.py
+=============================
+
+This module contains one function called,
+``print_square(size)``.
+
+Usage
+=====
+
+``print_square(...)`` prints '#' character in square shape.
+
+::
+      >>> print_square = __import__("4-print_square").print_square
+
+::
+      >>> length = __import__("4-print_square").__doc__
+      >>> len(length) > 1
+      True
+
+::
+      >>> length2 = __import__("4-print_square").print_square.__doc__
+      >>> len(length2) > 1
+      True
+
+Passing None as an argument:
+	 >>> print_square(None)
+	 Traceback (most recent call last):
+         ...
+         TypeError: size must be an integer
+
+Passing ints greater than or equal to 0:
+	 >>> print_square(4)
+	 ####
+	 ####
+	 ####
+	 ####
+	 >>> print_square(10)
+	 ##########
+	 ##########
+	 ##########
+	 ##########
+	 ##########
+	 ##########
+	 ##########
+	 ##########
+	 ##########
+	 ##########
+
+Passing ints less than 0:
+	 >>> print_square(-1)
+	 Traceback (most recent call last):
+         ...
+         ValueError: size must be >= 0
+
+Checking for non-number types:
+	 >>> print_square((1,))
+	 Traceback (most recent call last):
+         ...
+         TypeError: size must be an integer
+	 >>> print_square("3")
+	 Traceback (most recent call last):
+         ...
+         TypeError: size must be an integer
+
+Checking for float number types:
+	 >>> print_square(3.5)
+	 Traceback (most recent call last):
+         ...
+         TypeError: size must be an integer
+
+Passing no args:
+	 >>> print_square()
+	 Traceback (most recent call last):
+	 ...
+	 TypeError: print_square() missing 1 required positional argument: 'size'

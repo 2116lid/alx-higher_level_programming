@@ -1,0 +1,60 @@
+#3-say_my_name.txt
+
+============================
+ How to Use 3-say_my_name.py
+============================
+
+This module provides the ``say_my_name(first_name, last_name="")``
+function.
+
+usage
+=====
+
+``say_my_name(...)`` prints the first and last name of a person.
+
+::
+     >>> say_my_name = __import__("3-say_my_name").say_my_name
+
+::
+    >>> length = __import__("3-say_my_name").__doc__
+    >>> len(length) > 1
+    True
+
+::
+    >>> length2 = __import__("3-say_my_name").say_my_name.__doc__
+    >>> len(length2) > 1
+    True
+
+checking for regular string:
+	 >>> say_my_name("Say", "Hi")
+	 My name is Say Hi
+	 >>> say_my_name("Noah Hulu", "Alemayehu lem")
+	 My name is Noah Hulu Alemayehu lem
+
+Checking for numbers as first name:
+         >>> say_my_name(3, "Bob")
+         Traceback (most recent call last):
+         ...
+         TypeError: first_name must be a string
+
+Checking for non-strings as last name:
+         >>> say_my_name("Noah", (0,0))
+         Traceback (most recent call last):
+         ...
+         TypeError: last_name must be a string
+
+Passing None as first name:
+	 >>> say_my_name(None, "Alem")
+	 Traceback (most recent call last):
+         ...
+         TypeError: first_name must be a string
+
+Passing None as last name:
+	 >>> say_my_name("Noah", None)
+	 Traceback (most recent call last):
+         ...
+         TypeError: last_name must be a string
+
+Checking for one arg:
+	 >>> say_my_name("Noah")
+	 My name is Noah 

@@ -52,5 +52,10 @@ class TestMaxInteger(unittest.TestCase):
         with self.assertRaises(TypeError):
             max_integer(None)
 
+    def test_one_element(self):
+        """Tests for only one number in the list"""
+        g = [5]
+        self.assertEqual(max_integer(g), 5)
+
 if __name__ == "__main__":
     unittest.main()

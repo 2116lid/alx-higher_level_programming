@@ -98,3 +98,18 @@ If matrix is empty:
          Traceback (most recent call last):
          ...
          TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix_divided([[4, 5], [6, 8]], float('inf'))
+[[0.0, 0.0], [0.0, 0.0]]
+
+>>> try:
+...     matrix_divided([[4, 7]])
+... except Exception as ex:
+...     print(ex.args[0])
+matrix_divided() missing 1 required positional argument: 'div'
+
+>>> try:
+...     matrix_divided()
+... except Exception as ex:
+...     print(ex.args[0])
+matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'

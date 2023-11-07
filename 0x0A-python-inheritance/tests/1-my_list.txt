@@ -44,6 +44,16 @@ Checking for reversed order list:
 	 >>> print(l)
 	 [4, 3, 2, 1]
 
+Checking for one negative number:
+	 >>> l.append(-1)
+	 >>> l.append(5)
+	 >>> print(l)
+	 [4, 3, 2, 1, -1, 5]
+	 >>> l.print_sorted()
+	 [-1, 1, 2, 3, 4, 5]
+	 >>> print(l)
+	 [4, 3, 2, 1, -1, 5]
+
 Checking for too many arguments:
 	 >>> l.print_sorted(1)
 	 Traceback (most recent call last):

@@ -1,5 +1,8 @@
-#!/usr/bin/pyhton3
-""" Defining a class """
+#!/usr/bin/python3
+"""
+Contains the class BaseGeometry and subclass Rectangle
+"""
+
 
 class BaseGeometry:
     """A class with public instance methods area and integer_validator"""
@@ -25,9 +28,9 @@ class Rectangle(BaseGeometry):
         self.__height = height
 
     def area(self):
-        """ Return the area """
+        """returns the area of the rectangle"""
         return self.__width * self.__height
 
     def __str__(self):
-        """returns string representation """
+        """informal string representation of the rectangle"""
         return "[Rectangle] {:d}/{:d}".format(self.__width, self.__height)

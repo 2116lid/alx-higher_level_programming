@@ -7,6 +7,9 @@ How to use ``MyList``
 Importing the function:
        >>> MyList = __import__("1-my_list").MyList
 
+>>> isinstance(MyList, list)
+False
+
 check if MyList inherits from list:
        >>> issubclass(MyList, list)
        True

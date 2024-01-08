@@ -8,6 +8,6 @@ argv.forEach((arg, index) => {
 });
 if (count === 0) {
   console.log('No argument');
-} else if (count === 1) {
+} else if (count >= 1) {
   console.log(argv[2]);
 }

@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-"""A module to find peak"""
-
-#!/usr/bin/python3
-"""Algorithms for list of integers."""
+"""A module to find the peak"""
 
 
 def find_peak(list_of_integers):
